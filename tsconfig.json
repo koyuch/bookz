@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "target": "es2017",
     "noImplicitAny": true,
@@ -10,6 +11,10 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "paths": {
       "*": [
         "node_modules/*"
@@ -17,6 +22,9 @@
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/*.test.ts"
   ]
 }

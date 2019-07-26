@@ -10,7 +10,7 @@
     "prestart": "npm run build",
     "start": "node .",
     "clean": "rm -r dist",
-    "start:dev": "ts-node src/server.ts",
+    "dev:start": "ts-node src/server.ts",
     "dev:watch": "nodemon --watch src --ext ts --exec npm run start:dev",
     "test": "NODE_ENV=test mocha --exit -r ts-node/register src/tests/**/*.test.ts",
     "test:js": "mocha dist/tests/**/*.test.js",

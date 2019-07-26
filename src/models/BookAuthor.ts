@@ -3,7 +3,7 @@ import {Author} from "./Author";
 import {Book} from "./Book";
 
 @Table({
-  timestamps: true,
+  timestamps: false,
   tableName: "book_author"
 })
 export class BookAuthor extends Model<BookAuthor> {

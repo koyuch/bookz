@@ -1,0 +1,41 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/author.json",
+  "type": "object",
+  "title": "The Author Schema",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "examples": [
+        1
+      ],
+      "readOnly": true
+    },
+    "firstName": {
+      "$id": "#/properties/firstName",
+      "type": "string",
+      "title": "The Firstname Schema",
+      "default": null,
+      "examples": [
+        "Fero"
+      ]
+    },
+    "lastName": {
+      "$id": "#/properties/lastName",
+      "type": "string",
+      "title": "The Lastname Schema",
+      "examples": [
+        "Sparatko"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    }
+  },
+  "required": [
+    "lastName"
+  ]
+}

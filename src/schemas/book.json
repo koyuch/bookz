@@ -1,0 +1,89 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/book.json",
+  "type": "object",
+  "title": "The Book Schema",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "examples": [
+        1
+      ],
+      "readOnly": true
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "title": "The Title Schema",
+      "examples": [
+        "Proc?"
+      ],
+      "minLength": 1,
+      "maxLength": 255,
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": null,
+      "examples": [
+        "Preco je dobre byt sam sebou."
+      ],
+      "pattern": "^(.*)$"
+    },
+    "authors": {
+      "$id": "#/properties/authors",
+      "type": "array",
+      "title": "The Authors Schema",
+      "items": {
+        "$id": "#/properties/authors/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "properties": {
+          "id": {
+            "$id": "#/properties/authors/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": null,
+            "examples": [
+              1
+            ],
+            "readOnly": true
+          },
+          "firstName": {
+            "$id": "#/properties/authors/items/properties/firstName",
+            "type": "string",
+            "title": "The Firstname Schema",
+            "default": null,
+            "examples": [
+              "Fero"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "lastName": {
+            "$id": "#/properties/authors/items/properties/lastName",
+            "type": "string",
+            "title": "The Lastname Schema",
+            "examples": [
+              "Sparatko"
+            ],
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^(.*)$"
+          }
+        },
+        "required": [
+          "lastName"
+        ]
+      }
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

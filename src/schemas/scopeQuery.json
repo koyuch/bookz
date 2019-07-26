@@ -1,0 +1,21 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/scopeQuery.json",
+  "type": "object",
+  "title": "The Scope Schema",
+  "additionalProperties": false,
+  "properties": {
+    "scope": {
+      "$id": "#/properties/scope",
+      "type": "string",
+      "enum": ["full"],
+      "title": "The Scope Schema",
+      "default": null,
+      "examples": [
+        "full"
+      ],
+      "minLength": 1
+    }
+  }
+}

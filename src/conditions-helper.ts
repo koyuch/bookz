@@ -13,11 +13,19 @@ export class Conditions {
     }
   }
 
+  public addAllConditions(): any {
+    if (this.dict) {
+      return this.where = Object.entries(this.dict).flatMap(([key, value]) => {
+        return (typeof value === "string") ? {[key]: {[Op.substring]: value}} : [];
+      });
+    }
+  }
+
   public getConditions(): any {
     if (Object.keys(this.where).length > 1) {
       return {
-        [Op.and]: this.where
-      }
+        [Op.or]: this.where
+      };
     } else {
       return this.where;
     }

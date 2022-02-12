@@ -20,7 +20,7 @@
   "license": "GPL-3.0",
   "repository": "github:koyuch/bookz",
   "dependencies": {
-    "ajv": "^6.10.2",
+    "ajv": "^6.12.3",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-bearer-token": "^2.4.0",
